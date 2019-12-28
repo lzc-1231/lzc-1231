@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>com.book.shopping.filter.EncodingFilter</filter-class>
+	</filter>
+	<!-- <filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/servlet/*</url-pattern>
+	</filter-mapping> -->
+	
+	<servlet>
+		<servlet-name>userAuthorityManagerMenetServlet</servlet-name>
+		<servlet-class>com.book.shopping.servlet.UserAuthorityManagerMenetServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userAuthorityManagerMenetServlet</servlet-name>
+		<url-pattern>/servlet/userAuthorityManagerMenetServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>userBookTypeInfoServlet</servlet-name>
+		<servlet-class>com.book.shopping.servlet.UserBookTypeInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userBookTypeInfoServlet</servlet-name>
+		<url-pattern>/servlet/userBookTypeInfoServlet</url-pattern>
+	</servlet-mapping>
+</web-app>
